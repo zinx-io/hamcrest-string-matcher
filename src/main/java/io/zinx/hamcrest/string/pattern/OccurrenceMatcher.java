@@ -29,13 +29,13 @@ import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
 
 
-public class OccuranceMatcher extends TypeSafeMatcher<String> {
+public class OccurrenceMatcher extends TypeSafeMatcher<String> {
 
     private final String searchString;
     private final int count;
 
 
-    public OccuranceMatcher(int count, String searchString) {
+    public OccurrenceMatcher(int count, String searchString) {
         this.count = count;
         this.searchString = searchString;
     }
@@ -52,7 +52,7 @@ public class OccuranceMatcher extends TypeSafeMatcher<String> {
     public void describeTo(Description description) {
         description.appendText("String contains ")
                 .appendValue(count)
-                .appendText(" occurances of ")
+                .appendText(" occurrence(s) of ")
                 .appendValue(searchString);
     }
 
@@ -62,14 +62,14 @@ public class OccuranceMatcher extends TypeSafeMatcher<String> {
         mismatchDescription.appendValue(item)
                 .appendText(" contains ")
                 .appendValue(StringUtils.countMatches(item, searchString))
-                .appendText(" occurance(s) of ")
+                .appendText(" occurrence(s) of ")
                 .appendValue(searchString);
     }
 
 
     @Factory
-    public static <T> Matcher<String> hasOccuranceCount(int occuranceCount, String text) {
-        return new OccuranceMatcher(occuranceCount, text);
+    public static <T> Matcher<String> hasOccurrenceCount(int occurrenceCount, String text) {
+        return new OccurrenceMatcher(occurrenceCount, text);
     }
 
 }
