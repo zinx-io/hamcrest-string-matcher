@@ -1,6 +1,9 @@
 # hamcrest-string-matcher
 Custom hamcrest matcher that counts occurances of a substring.
 
+## Current Release
+The current release is 0.0.5.
+
 ## Basic Usage
 ```
 import static io.zinx.hamcrest.string.pattern.OccuranceMatcher.hasOccuranceCount;
@@ -40,7 +43,7 @@ To include it using gradle, do the following:
 
 ```
 	dependencies {
-	    compile 'com.github.zinx-io:hamcrest-string-matcher:0.0.3'
+	    compile 'com.github.zinx-io:hamcrest-string-matcher:0.0.5'
 	}
 ```
 
@@ -57,7 +60,7 @@ To include it using maven, do the following:
 	<dependency>
 	    <groupId>com.github.zinx-io</groupId>
 	    <artifactId>hamcrest-string-matcher</artifactId>
-	    <version>0.0.3</version>
+	    <version>0.0.5</version>
 	</dependency>
 ```
 
